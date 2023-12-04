@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="slick.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script>
+	  $( function() {
+	    $( "#slider-range" ).slider({
+	      range: true,
+	      min: 1000,
+	      max: 500000,
+	      values: [ 100000, 300000 ],
+	      slide: function( event, ui ) {
+	        $( "#amount" ).val( "Цена: " + ui.values[ 0 ] + " ₽ — " + ui.values[ 1 ] + " ₽");
+	      }
+	    });
+	    $( "#amount" ).val( "Цена: " + $( "#slider-range" ).slider( "values", 0 ) +
+	      " ₽ — " + $( "#slider-range" ).slider( "values", 1 ) + " ₽" );
+	  } );
+	</script>
+</head>
+<body>
+	<nav class="mob-menu">
+		<div class="wrap flex">
+			<a href="#">
+				<span class="icon"><img src="img/mob-menu1.svg"></span>
+				Каталог
+			</a>
+			<a href="#">
+				<span class="icon"><img src="img/mob-menu2.svg"></span>
+				Поиск
+			</a>
+			<a href="#">
+				<span class="icon"><img src="img/mob-menu3.svg"></span>
+				Войти
+			</a>
+			<a href="#">
+				<span class="icon"><img src="img/mob-menu4.svg"></span>
+				Заказы
+			</a>
+			<a href="#">
+				<span class="icon"><img src="img/mob-menu5.svg"></span>
+				Избранное <i>0</i>
+			</a>
+			<a href="#">
+				<span class="icon"><img src="img/mob-menu6.svg"></span>
+				Корзина <i>0</i>
+			</a>
+		</div>
+	</nav>
+	<div class="menubg"></div>
+	<nav class="mobile-menu">
+		<ul>
+			<li><a href="#">О магазине</a></li>
+			<li><a href="#">Отзывы</a></li>
+			<li><a href="#">Доставка</a></li>
+			<li><a href="#">Оплата</a></li>
+			<li><a href="#">Скидки</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</nav>
+	<div class="top-page-line">
+		<div class="wrap flex">
+			<a href="#" class="city">Москва</a>
+			<a href="#" class="support">Тех поддержка клиентов</a>
+		</div>
+	</div>
+	<header class="header">
+		<div class="wrap flex">
+			<a class="menu-button"></a>
+			<div class="logo">
+				<a href="/"><img src="img/logo.png"></a>
+			</div>
+			<div class="search">
+				<form>
+					<input type="text" value="Поиск по каталогу, например: игрушки для развития">
+					<select>
+						<option>Выбрать категорию</option>
+						<option>Выбрать категорию</option>
+						<option>Выбрать категорию</option>
+					</select>
+					<button></button>
+				</form>
+				<div class="form-help">
+					Часто ищут:
+					<ul>
+						<li><a href="#">коляски</a></li>
+						<li><a href="#">ходунки</a></li>
+						<li><a href="#">дуделки</a></li>
+						<li><a href="#">велосипеды</a></li>
+						<li><a href="#">самокаты</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="links">
+				<div class="link">
+					<a href="#">Надежда</a>
+					<ul>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+								<g clip-path="url(#clip0_348_3355)">
+								<path d="M14.5397 11.2901C13.6683 10.4188 12.6312 9.7738 11.4997 9.38333C12.7116 8.54862 13.5078 7.15165 13.5078 5.57202C13.5078 3.0218 11.433 0.947021 8.88281 0.947021C6.33259 0.947021 4.25781 3.0218 4.25781 5.57202C4.25781 7.15165 5.05403 8.54862 6.266 9.38333C5.13444 9.7738 4.09731 10.4188 3.22597 11.2901C1.71497 12.8012 0.882812 14.8101 0.882812 16.947H2.13281C2.13281 13.2251 5.16084 10.197 8.88281 10.197C12.6048 10.197 15.6328 13.2251 15.6328 16.947H16.8828C16.8828 14.8101 16.0507 12.8012 14.5397 11.2901ZM8.88281 8.94702C7.02184 8.94702 5.50781 7.43302 5.50781 5.57202C5.50781 3.71102 7.02184 2.19702 8.88281 2.19702C10.7438 2.19702 12.2578 3.71102 12.2578 5.57202C12.2578 7.43302 10.7438 8.94702 8.88281 8.94702Z" fill="#424242"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_348_3355">
+								<rect width="16" height="16" fill="white" transform="translate(0.882812 0.947021)"/>
+								</clipPath>
+								</defs>
+								</svg>
+								Личные данные
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+								  <g clip-path="url(#clip0_348_3344)">
+								    <path d="M11.8821 15.072C11.8821 16.1059 12.7232 16.947 13.7571 16.947C14.7909 16.947 15.6321 16.1059 15.6321 15.072C15.6321 14.0381 14.7909 13.197 13.7571 13.197C12.7232 13.197 11.8821 14.0381 11.8821 15.072ZM13.7571 14.447C14.1017 14.447 14.3821 14.7274 14.3821 15.072C14.3821 15.4166 14.1017 15.697 13.7571 15.697C13.4124 15.697 13.1321 15.4166 13.1321 15.072C13.1321 14.7274 13.4124 14.447 13.7571 14.447ZM4.50706 15.072C4.50706 16.1059 5.34819 16.947 6.38206 16.947C7.41594 16.947 8.25706 16.1059 8.25706 15.072C8.25706 14.0381 7.41594 13.197 6.38206 13.197C5.34819 13.197 4.50706 14.0381 4.50706 15.072ZM6.38206 14.447C6.72669 14.447 7.00706 14.7274 7.00706 15.072C7.00706 15.4166 6.72669 15.697 6.38206 15.697C6.03744 15.697 5.75706 15.4166 5.75706 15.072C5.75706 14.7274 6.03744 14.447 6.38206 14.447ZM8.25706 7.07202H7.00706V10.697H8.25706V7.07202ZM4.50706 4.57202V2.82202C4.50706 1.78815 3.66594 0.947021 2.63206 0.947021H0.882812V2.19702H2.63203C2.97666 2.19702 3.25703 2.4774 3.25703 2.82202V10.072C3.25703 11.7951 4.65891 13.197 6.38203 13.197H13.757C15.4802 13.197 16.882 11.7951 16.882 10.072V4.57202H4.50706ZM15.6321 10.072C15.6321 11.1059 14.7909 11.947 13.7571 11.947H6.38206C5.34819 11.947 4.50706 11.1059 4.50706 10.072V5.82202H15.6321V10.072ZM10.7571 7.07202H9.50706V10.697H10.7571V7.07202ZM13.2571 7.07202H12.0071V10.697H13.2571V7.07202Z" fill="#424242"/>
+								  </g>
+								  <defs>
+								    <clipPath id="clip0_348_3344">
+								      <rect width="16" height="16" fill="white" transform="translate(0.882812 0.947021)"/>
+								    </clipPath>
+								  </defs>
+								</svg>
+								Заказы
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+								  <g clip-path="url(#clip0_348_3333)">
+								    <path d="M15.6014 2.96283C14.7751 2.13649 13.6986 1.6814 12.5703 1.6814C11.442 1.6814 10.3655 2.13649 9.53922 2.9628L8.88281 3.61924L8.22641 2.96283C7.40009 2.13649 6.32359 1.6814 5.19531 1.6814C4.06703 1.6814 2.99053 2.13649 2.16422 2.9628C1.33788 3.78915 0.882812 4.8878 0.882812 6.0564C0.882812 7.22393 1.337 8.32158 2.16191 9.14765L8.88281 16.0025L15.6037 9.14768C16.4286 8.32158 16.8828 7.22396 16.8828 6.0564C16.8828 4.8878 16.4277 3.78915 15.6014 2.96283ZM14.7175 8.26612L8.88281 14.217L3.04813 8.26612C2.45788 7.6759 2.13281 6.89112 2.13281 6.05643C2.13281 5.22174 2.45788 4.43696 3.04813 3.84671C3.63834 3.25646 4.40091 2.9314 5.19531 2.9314C5.98972 2.9314 6.75228 3.25646 7.3425 3.84668L8.88281 5.38699L10.4231 3.84671C11.0133 3.25649 11.7759 2.93143 12.5703 2.93143C13.3647 2.93143 14.1273 3.25649 14.7175 3.84671C15.3077 4.43693 15.6328 5.22171 15.6328 6.05643C15.6328 6.89115 15.3077 7.67587 14.7175 8.26612Z" fill="#424242"/>
+								  </g>
+								  <defs>
+								    <clipPath id="clip0_348_3333">
+								      <rect width="16" height="16" fill="white" transform="translate(0.882812 0.842041)"/>
+								    </clipPath>
+								  </defs>
+								</svg>
+								Избранные
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+								  <g clip-path="url(#clip0_348_3322)">
+								    <path d="M6.71666 2.23236L6.29897 1.0542C3.05941 2.20273 0.882812 5.28136 0.882812 8.71495H2.13281C2.13281 5.80954 3.97491 3.20439 6.71666 2.23236ZM14.3828 13.7149V8.71495C14.3828 5.80179 12.2903 3.43492 9.50781 3.12492V1.83995H8.25781V3.12492C5.47513 3.43495 3.38281 5.80198 3.38281 8.71495V13.7149C3.38281 14.0596 3.10244 14.3399 2.75781 14.3399H2.13281V15.5899H8.25781V16.8399H9.50781V15.5899H15.6328V14.3399H15.0078C14.6632 14.3399 14.3828 14.0596 14.3828 13.7149ZM4.52572 14.3399C4.59506 14.1444 4.63281 13.934 4.63281 13.7149V8.71495C4.63281 6.26167 6.49963 4.33995 8.88281 4.33995C11.266 4.33995 13.1328 6.26167 13.1328 8.71495V13.7149C13.1328 13.934 13.1706 14.1444 13.2399 14.3399H4.52572ZM11.4667 1.0542L11.049 2.23236C13.7907 3.20439 15.6328 5.80954 15.6328 8.71495H16.8828C16.8828 5.28136 14.7063 2.20273 11.4667 1.0542Z" fill="#424242"/>
+								  </g>
+								  <defs>
+								    <clipPath id="clip0_348_3322">
+								      <rect width="16" height="16" fill="white" transform="translate(0.882812 0.947021)"/>
+								    </clipPath>
+								  </defs>
+								</svg>
+								Уведомления
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+								  <g clip-path="url(#clip0_348_3312)">
+								    <path d="M15.0039 7.44824H14.5039V6.82324C14.5039 3.72162 11.9805 1.19824 8.87891 1.19824C5.77728 1.19824 3.25391 3.72162 3.25391 6.82324V7.44824H2.75391C1.72003 7.44824 0.878906 8.28937 0.878906 9.32324V10.5732C0.878906 11.6071 1.72003 12.4482 2.75391 12.4482H4.50391V6.82324C4.50391 4.41087 6.46653 2.44824 8.87891 2.44824C11.2913 2.44824 13.2539 4.41087 13.2539 6.82324V11.8232C13.2539 12.8571 12.4128 13.6982 11.3789 13.6982H10.6464C10.3884 12.9708 9.69369 12.4482 8.87891 12.4482C7.84503 12.4482 7.00391 13.2894 7.00391 14.3232C7.00391 15.3571 7.84503 16.1982 8.87891 16.1982C9.69369 16.1982 10.3884 15.6757 10.6464 14.9482H11.3789C12.8881 14.9482 14.1507 13.8729 14.4411 12.4482H15.0039C16.0378 12.4482 16.8789 11.6071 16.8789 10.5732V9.32324C16.8789 8.28937 16.0378 7.44824 15.0039 7.44824ZM3.25391 11.1982H2.75391C2.40928 11.1982 2.12891 10.9179 2.12891 10.5732V9.32324C2.12891 8.97862 2.40928 8.69824 2.75391 8.69824H3.25391V11.1982ZM8.87891 14.9482C8.53428 14.9482 8.25391 14.6679 8.25391 14.3232C8.25391 13.9786 8.53428 13.6982 8.87891 13.6982C9.22353 13.6982 9.50391 13.9786 9.50391 14.3232C9.50391 14.6679 9.22353 14.9482 8.87891 14.9482ZM15.6289 10.5732C15.6289 10.9179 15.3485 11.1982 15.0039 11.1982H14.5039V8.69824H15.0039C15.3485 8.69824 15.6289 8.97862 15.6289 9.32324V10.5732Z" fill="#FF1B6D"/>
+								  </g>
+								  <defs>
+								    <clipPath id="clip0_348_3312">
+								      <rect width="16" height="16" fill="white" transform="translate(0.878906 0.698242)"/>
+								    </clipPath>
+								  </defs>
+								</svg>
+								Поддержка
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="link">
+					<a href="#">Заказы</a>
+				</div>
+				<div class="link">
+					<a href="#">Избранное</a>
+				</div>
+				<div class="link">
+					<a href="#">Корзина</a>
+				</div>
+			</div>
+			<a href="#" class="phone">+7 (495) 123-45-67</a>
+		</div>
+	</header>
+	<nav class="top-menu">
+		<div class="wrap flex">
+			<a href="#" class="catalog-link">Каталог</a>
+			<ul>
+				<li><a href="#">О магазине</a></li>
+				<li><a href="#">Отзывы</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Оплата</a></li>
+				<li><a href="#">Скидки</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div class="contacts">
+				<div class="mess">
+					<a href="#"><img src="img/mess1.svg"></a>
+					<a href="#"><img src="img/mess2.svg"></a>
+				</div>
+				<div class="links">
+					<a href="#">+7 (495) 123-45-67</a>
+					<a href="#">заказать звонок</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="index-top-block">
+		<div class="wrap flex">
+			<nav>
+				<ul>
+					<li><a href="#">Мебель и средства <br/>передвижения</a></li>
+					<li><a href="#">Оборудование для инклюзивного образования</a></li>
+					<li><a href="#">Оборудование для проведения коррекционно-развивающих занятий</a></li>
+					<li><a href="#">Интерактивное оборудование</a></li>
+					<li><a href="#">Реабилитационное оборудование</a></li>
+					<li><a href="#">Доступная среда</a></li>
+					<li><a href="#">Оборудование для улицы</a></li>
+					<li><a href="#">Логопедическое оборудование</a></li>
+				</ul>
+			</nav>
+			<div class="banner">
+				<div class="text">
+					<div class="name">
+						Товары для <br/>реабилитации детей
+					</div>
+					<p>С доставкой по всей России</p>
+					<button>В Каталог</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="index-categories-block">
+		<img src="img/image.png" class="image">
+		<div class="wrap flex">
+			<div class="item color1">
+				<img src="img/cat1.png">
+				<div class="name">
+					Мебель и средства передвижения
+				</div>
+				<button>Смотреть</button>
+			</div>
+			<div class="item color2">
+				<img src="img/cat2.png">
+				<div class="name">
+					Оборудование для инклюзивного образования
+				</div>
+				<button>Смотреть</button>
+			</div>
+			<div class="item color3">
+				<img src="img/cat3.png">
+				<div class="name">
+					Реабилитационное оборудование
+				</div>
+				<button>Смотреть</button>
+			</div>
+		</div>
+	</div>
+	<div class="catalog-page index">
+		<div class="wrap">
+			<h1>Каталог</h1>
+			<div class="top-text">
+				Наш ассортимент ежедневно пополняется самыми популярными товарами
+			</div>
+			<div class="sort">
+				<div class="types">
+					<a href="#" class="active">
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="0.496094" y="0.497559" width="4.00244" height="4.00244" fill="#252525"/>
+						<rect x="6.49609" y="0.497559" width="4.00244" height="4.00244" fill="#252525"/>
+						<rect x="12.4961" y="0.497559" width="4.00244" height="4.00244" fill="#252525"/>
+						<rect x="0.496094" y="6.49756" width="4.00244" height="4.00244" fill="#252525"/>
+						<rect x="6.49609" y="6.49756" width="4.00244" height="4.00244" fill="#252525"/>
+						<rect x="12.4961" y="6.49756" width="4.00244" height="4.00244" fill="#252525"/>
+						<rect x="0.496094" y="12.4976" width="4.00244" height="4.00244" fill="#252525"/>
+						<rect x="6.49609" y="12.4976" width="4.00244" height="4.00244" fill="#252525"/>
+						<rect x="12.4961" y="12.4976" width="4.00244" height="4.00244" fill="#252525"/>
+						</svg>
+					</a>
+					<a href="#">
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="0.496094" y="0.497559" width="4.00244" height="4.00244" fill="#B6B6B6"/>
+						<rect x="6.49609" y="0.497559" width="4.00244" height="4.00244" fill="#B6B6B6"/>
+						<rect x="12.4961" y="0.497559" width="4.00244" height="4.00244" fill="#B6B6B6"/>
+						<rect x="0.496094" y="6.49756" width="16.0024" height="2.08563" fill="#B6B6B6"/>
+						<rect x="0.496094" y="10.4976" width="16.0024" height="2.08563" fill="#B6B6B6"/>
+						<rect x="0.496094" y="14.4976" width="16.0024" height="2.08563" fill="#B6B6B6"/>
+						</svg>
+					</a>
+					<a href="#">
+						<svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="0.496094" y="0.497559" width="4.00244" height="4.00244" fill="#B6B6B6"/>
+						<rect x="0.496094" y="6.49756" width="4.00244" height="4.00244" fill="#B6B6B6"/>
+						<rect x="0.496094" y="12.4976" width="4.00244" height="4.00244" fill="#B6B6B6"/>
+						<rect x="6.49609" y="1.49756" width="16.0024" height="2.08563" fill="#B6B6B6"/>
+						<rect x="6.49609" y="7.49756" width="16.0024" height="2.08563" fill="#B6B6B6"/>
+						<rect x="6.49609" y="13.4976" width="16.0024" height="2.08563" fill="#B6B6B6"/>
+						</svg>
+					</a>
+				</div>
+				<select>
+					<option>Сортировать</option>
+					<option>Сортировать</option>
+					<option>Сортировать</option>
+				</select>
+			</div>
+			<div class="flex">
+				<div class="filter">
+					<form>
+						<div class="block-name">
+							Фильтр
+						</div>
+						<div class="item">
+							<div class="name">
+								Цена
+							</div>
+							<div id="slider-range"></div>
+							<input type="text" id="amount" class="range" readonly>
+							<button>Применить</button>
+						</div>
+						<div class="item">
+							<div class="name">
+								Цвет
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r11" name="r11"><label for="r11">Белый <span>(15)</span></label>
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r12" name="r11"><label for="r12">Черный <span>(10)</span></label>
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r13" name="r11"><label for="r13">Синий <span>(25)</span></label>
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r14" name="r11"><label for="r14">Красный <span>(8)</span></label>
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r15" name="r11"><label for="r15">Коричневый <span>(17)</span></label>
+							</div>
+							<div class="bottom-link">
+								<a href="#">Показать все +</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="name">
+								Вес
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r1" name="r1"><label for="r1">40 кг <span>(15)</span></label>
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r2" name="r1"><label for="r2">50 кг <span>(10)</span></label>
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r3" name="r1"><label for="r3">60 кг <span>(25)</span></label>
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r4" name="r1"><label for="r4">70 кг <span>(8)</span></label>
+							</div>
+							<div class="select-item">
+								<input type="radio" class="radio" id="r5" name="r1"><label for="r5">80 кг <span>(17)</span></label>
+							</div>
+							<div class="bottom-link">
+								<a href="#">Показать все +</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="list">
+					<div class="flex">
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge"><img src="img/badge3.svg"> Хит</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge"><img src="img/badge3.svg"> Хит</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge"><img src="img/badge3.svg"> Хит</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge"><img src="img/badge3.svg"> Хит</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge"><img src="img/badge3.svg"> Хит</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+						<div class="site-item">
+							<a href="#" class="fav-link"></a>
+							<span class="badge"><img src="img/badge3.svg"> Хит</span>
+							<div class="photos">
+								<div class="images">
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+									<div class="image"><img src="img/item.png"></div>
+								</div>
+								<button class="fast">Быстрый просмотр</button>
+							</div>
+							<div class="name">
+								Тренажер «Горка»
+							</div>
+							<div class="about">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry
+							</div>
+							<div class="price">
+								30 600 ₽
+								<span class="old">45 600 ₽</span>
+								<span class="discount">-10%</span>
+							</div>
+							<div class="items">
+								Осталось: <span>9 шт.</span>
+							</div>
+							<div class="line">
+								<span style="width: 60%;"></span>
+							</div>
+							<div class="counts">
+								<span class="rating">4,8</span>
+								<span class="comments">671</span>
+							</div>
+							<div class="delivery">
+								Доставка: <span>Завтра</span>
+							</div>
+							<button>Купить</button>
+							<button class="other">В корзину</button>
+						</div>
+					</div>
+					<div class="pages">
+						<a href="#">«</a>
+						<a href="#">‹</a>
+						<a href="#" class="active">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">...</a>
+						<a href="#">10</a>
+						<a href="#">›</a>
+						<a href="#">»</a>
+					</div>
+					<div class="loading">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="index-counts-block">
+		<div class="wrap flex">
+			<div class="item">
+				<div class="number">
+					15+
+				</div>
+				<p>
+					<svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_109_379)">
+					<path d="M15.6299 15.7894L12.597 14.9511L12.3389 13.8101C13.1504 12.922 13.7061 11.7031 13.8708 10.451C14.3204 10.3119 14.6688 9.88485 14.7289 9.35025L14.9268 7.60024C14.9688 7.23097 14.8659 6.85822 14.6442 6.57735C14.5144 6.41283 14.3505 6.2886 14.1692 6.21247L14.2421 4.56483L14.5382 4.23671C14.9839 3.71257 15.3536 2.81396 14.5809 1.5102C13.9872 0.508389 12.9786 0 11.5821 0C11.0319 0 9.76285 0 8.58169 0.87675C5.20915 0.954639 4.75 2.68624 4.75 4.37501C4.75 4.7679 4.83628 5.65253 4.89328 6.18626C4.68981 6.25714 4.50456 6.38839 4.3605 6.56865C4.13565 6.85129 4.03038 7.22667 4.07235 7.59942L4.27025 9.34943C4.33515 9.92082 4.72785 10.3688 5.22262 10.4756C5.3865 11.6787 5.91375 12.8591 6.6785 13.7323L6.403 14.9512L3.37013 15.7894C1.3854 16.338 0 18.2997 0 20.5625C0 20.804 0.177346 21 0.395846 21H18.6042C18.8227 21 19 20.8023 19 20.5608C19 18.2997 17.6146 16.338 15.6299 15.7894ZM0.81225 20.125C0.974529 18.4547 2.0599 17.0538 3.5625 16.6382L6.82497 15.7369C6.96669 15.6975 7.0775 15.575 7.11394 15.4184L7.50185 13.7025C7.53747 13.5485 7.49312 13.3858 7.38863 13.2773C6.58903 12.4487 6.06022 11.2333 5.97313 10.0275C5.9565 9.80003 5.78472 9.62505 5.5781 9.62505H5.44907C5.24957 9.62505 5.08094 9.46054 5.05641 9.24181L4.85851 7.49179C4.84426 7.36493 4.87829 7.24328 4.95429 7.14792C5.03029 7.05255 5.13557 7.00005 5.25116 7.00005H5.33269C5.44669 7.00005 5.55516 6.94579 5.62957 6.85219C5.70479 6.75769 5.7396 6.63255 5.72535 6.50832C5.67469 6.05944 5.54169 4.80293 5.54169 4.37505C5.54169 3.01005 5.78394 1.78242 8.71232 1.75005C8.79307 1.74919 8.87304 1.72032 8.93872 1.66868C9.82222 0.969568 10.7706 0.875068 11.5821 0.875068C12.6952 0.875068 13.4805 1.25044 13.9183 1.98983C14.444 2.87794 14.2176 3.33732 13.9698 3.62869L13.5739 4.06621C13.5043 4.14319 13.4631 4.24557 13.4583 4.3541L13.3626 6.54421C13.3578 6.66319 13.3966 6.77869 13.4702 6.86532C13.5438 6.95194 13.646 7.00182 13.7536 7.00268C13.8684 7.00354 13.9729 7.05694 14.0481 7.1523C14.1233 7.2468 14.1566 7.36669 14.1423 7.49179L13.9444 9.24181C13.9199 9.46054 13.7505 9.62505 13.513 9.62505C13.3063 9.62505 13.1346 9.80007 13.1179 10.0275C13.0285 11.2718 12.4743 12.5108 11.6343 13.3429C11.5251 13.4505 11.4792 13.6168 11.5148 13.7743L11.8869 15.4184C11.9225 15.575 12.0334 15.6975 12.1743 15.7369L15.4375 16.6381C16.9393 17.0537 18.0247 18.4537 18.187 20.125H0.81225V20.125Z" fill="#B3B3B3"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_109_379">
+					<rect width="19" height="21" fill="white"/>
+					</clipPath>
+					</defs>
+					</svg>
+					лет на рынке
+				</p>
+			</div>
+			<div class="item">
+				<div class="number">
+					5 000+
+				</div>
+				<p>
+					<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_109_387)">
+					<path d="M22.8979 17.249C22.3288 16.1033 20.2927 14.5131 18.3256 12.9766C17.2284 12.1203 16.1917 11.3106 15.5307 10.6725C15.3652 10.5115 15.1175 10.4601 14.8988 10.536C14.4916 10.6783 14.2402 10.788 14.0421 10.8731C13.74 11.0038 13.6385 11.0481 13.2313 11.0878C13.0512 11.1053 12.8894 11.1986 12.7891 11.3433C11.9347 12.5764 11.0502 12.4714 10.4594 12.2801C10.2709 12.2195 10.2371 12.1413 10.2189 12.0666C10.0921 11.5545 10.7289 10.3621 11.5541 9.56529C13.5177 7.66829 14.5302 7.19343 16.669 8.11629C19.0953 9.16393 21.5265 9.98414 21.5507 9.99229C21.8685 10.0984 22.2104 9.93743 22.3204 9.63293C22.4291 9.32843 22.2636 8.99593 21.9482 8.88979C21.924 8.88164 19.5412 8.07779 17.1632 7.04993C14.3925 5.85408 12.8724 6.64158 10.701 8.73929C9.8745 9.53729 8.75194 11.1519 9.04193 12.3361C9.16637 12.8401 9.53375 13.2135 10.0799 13.3873C11.4489 13.8236 12.6983 13.4059 13.6287 12.2136C14.013 12.1565 14.2221 12.0725 14.5362 11.936C14.6498 11.887 14.7827 11.8298 14.9591 11.761C15.6503 12.3875 16.5831 13.1166 17.5655 13.8831C19.3418 15.2703 21.3561 16.843 21.8092 17.753C22.0327 18.2021 21.7922 18.495 21.6291 18.6291C21.3899 18.8275 21.0624 18.8905 20.8848 18.7703C20.6891 18.6408 20.4341 18.6326 20.2323 18.7493C20.0293 18.8659 19.9157 19.0864 19.9411 19.3128C19.9822 19.6838 19.6306 19.8961 19.4783 19.9696C19.0916 20.1586 18.6881 20.126 18.537 19.9906C18.3678 19.839 18.1249 19.7946 17.9099 19.8716C17.6948 19.9498 17.5449 20.1411 17.5232 20.3628C17.4869 20.7454 17.1933 21.1129 16.8103 21.2564C16.6254 21.3241 16.3571 21.3649 16.1167 21.1526C15.9669 21.0219 15.759 20.9717 15.5645 21.0172C15.3676 21.0639 15.2092 21.2016 15.1404 21.3847C15.1174 21.4431 15.0654 21.5831 14.4999 21.5831C14.0976 21.5831 13.3738 21.3206 13.0197 21.0942C12.5956 20.8247 9.93606 18.9091 7.63906 17.0517C7.31644 16.7892 6.75819 16.2269 6.26519 15.7299C5.82775 15.2889 5.42781 14.8887 5.22238 14.7207C4.965 14.5107 4.58438 14.5422 4.3705 14.7896C4.15544 15.0357 4.18681 15.4044 4.44181 15.6121C4.62912 15.7649 4.99162 16.1347 5.39156 16.5372C5.9305 17.0809 6.4875 17.6432 6.86212 17.9466C9.11206 19.7654 11.8163 21.7289 12.3552 22.0707C12.7999 22.3531 13.7581 22.7497 14.5 22.7497C15.0957 22.7497 15.5537 22.6179 15.8714 22.3601C16.2968 22.5199 16.7801 22.5211 17.2453 22.3461C17.7951 22.1407 18.247 21.7266 18.5032 21.2249C18.9792 21.3229 19.5242 21.2541 20.0196 21.0138C20.5042 20.7781 20.8546 20.4176 21.0286 19.9964C21.5095 20.0209 22.0049 19.8564 22.4145 19.5169C23.1082 18.9441 23.2991 18.0528 22.8979 17.249Z" fill="#B3B3B3"/>
+					<path d="M12.0834 7.58313H6.64593C6.31243 7.58313 6.04175 7.84448 6.04175 8.16648C6.04175 8.48848 6.31243 8.74983 6.64593 8.74983H12.0834C12.4169 8.74983 12.6876 8.48848 12.6876 8.16648C12.6876 7.84448 12.4169 7.58313 12.0834 7.58313Z" fill="#B3B3B3"/>
+					<path d="M24.6681 16.0077C24.4808 15.7405 24.1062 15.667 23.8295 15.849L22.063 16.9947C21.7863 17.1743 21.7125 17.5372 21.8987 17.8043C22.0158 17.9712 22.2068 18.0622 22.4013 18.0622C22.5162 18.0622 22.6333 18.0307 22.7373 17.963L24.5038 16.8174C24.7805 16.6377 24.8542 16.2749 24.6681 16.0077Z" fill="#B3B3B3"/>
+					<path d="M20.9175 18.7913C20.485 18.4623 18.5504 16.5502 17.3542 15.3462C17.1234 15.1128 16.7403 15.1047 16.4999 15.3287C16.2582 15.5515 16.2509 15.9213 16.4817 16.1535C16.7923 16.4662 19.5315 19.223 20.1684 19.7084C20.2783 19.7924 20.4112 19.8332 20.5417 19.8332C20.7194 19.8332 20.897 19.7562 21.0178 19.6104C21.2245 19.3583 21.1798 18.9908 20.9175 18.7913Z" fill="#B3B3B3"/>
+					<path d="M18.5031 19.9615C17.7793 19.4026 15.9608 17.5371 15.55 17.1055C15.3228 16.8675 14.9421 16.8535 14.6956 17.0705C14.4503 17.2886 14.4335 17.6585 14.6594 17.8953C14.6811 17.9175 16.8513 20.1797 17.7479 20.8727C17.8591 20.9578 17.9932 20.9998 18.1249 20.9998C18.3013 20.9998 18.4777 20.924 18.5973 20.7817C18.8053 20.5296 18.763 20.1621 18.5031 19.9615Z" fill="#B3B3B3"/>
+					<path d="M16.0987 21.1363C15.2372 20.4351 13.4742 18.6233 13.1298 18.2674C12.9015 18.0318 12.5184 18.0189 12.2755 18.2394C12.0315 18.4599 12.0194 18.8286 12.2465 19.0643C12.742 19.5764 14.4288 21.3031 15.3193 22.0288C15.4329 22.1209 15.5707 22.1664 15.7084 22.1664C15.88 22.1664 16.0516 22.0953 16.1712 21.9588C16.3863 21.7114 16.3537 21.3439 16.0987 21.1363Z" fill="#B3B3B3"/>
+					<path d="M7.0615 6.57639C6.02594 5.62904 1.885 5.32219 0.640436 5.25104C0.468871 5.24289 0.310561 5.29769 0.189746 5.40854C0.068875 5.51819 0 5.67219 0 5.83319V16.3332C0 16.6552 0.270686 16.9165 0.604186 16.9165H4.22919C4.49019 16.9165 4.72219 16.7544 4.80313 16.514C4.89131 16.2527 6.97331 10.0834 7.24756 7.05004C7.26331 6.87269 7.19562 6.69769 7.0615 6.57639ZM3.78812 15.7499H1.20831V6.45854C3.15013 6.60669 5.24537 6.92869 6.00662 7.28569C5.68644 9.84069 4.23762 14.3802 3.78812 15.7499Z" fill="#B3B3B3"/>
+					<path d="M28.3959 6.4165C23.6519 6.4165 21.0202 7.589 20.9103 7.638C20.7532 7.70915 20.6359 7.841 20.5876 8.00086C20.5393 8.16071 20.5634 8.33221 20.6541 8.4745C21.4008 9.63536 23.7389 16.0824 24.1884 17.655C24.2609 17.9082 24.499 18.0832 24.7709 18.0832H28.3959C28.7294 18.0832 29.0001 17.8218 29.0001 17.4998V6.9998C29.0001 6.67665 28.7294 6.4165 28.3959 6.4165ZM27.7917 16.9165H25.2228C24.6501 15.1152 22.9584 10.4182 22.0147 8.47686C22.9366 8.17471 24.9171 7.6555 27.7917 7.59021V16.9165Z" fill="#B3B3B3"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_109_387">
+					<rect width="29" height="28" fill="white"/>
+					</clipPath>
+					</defs>
+					</svg>
+					довольных клиентов
+				</p>
+			</div>
+			<div class="item">
+				<div class="number">
+					3 000+
+				</div>
+				<p>
+					<svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_109_379)">
+					<path d="M15.6299 15.7894L12.597 14.9511L12.3389 13.8101C13.1504 12.922 13.7061 11.7031 13.8708 10.451C14.3204 10.3119 14.6688 9.88485 14.7289 9.35025L14.9268 7.60024C14.9688 7.23097 14.8659 6.85822 14.6442 6.57735C14.5144 6.41283 14.3505 6.2886 14.1692 6.21247L14.2421 4.56483L14.5382 4.23671C14.9839 3.71257 15.3536 2.81396 14.5809 1.5102C13.9872 0.508389 12.9786 0 11.5821 0C11.0319 0 9.76285 0 8.58169 0.87675C5.20915 0.954639 4.75 2.68624 4.75 4.37501C4.75 4.7679 4.83628 5.65253 4.89328 6.18626C4.68981 6.25714 4.50456 6.38839 4.3605 6.56865C4.13565 6.85129 4.03038 7.22667 4.07235 7.59942L4.27025 9.34943C4.33515 9.92082 4.72785 10.3688 5.22262 10.4756C5.3865 11.6787 5.91375 12.8591 6.6785 13.7323L6.403 14.9512L3.37013 15.7894C1.3854 16.338 0 18.2997 0 20.5625C0 20.804 0.177346 21 0.395846 21H18.6042C18.8227 21 19 20.8023 19 20.5608C19 18.2997 17.6146 16.338 15.6299 15.7894ZM0.81225 20.125C0.974529 18.4547 2.0599 17.0538 3.5625 16.6382L6.82497 15.7369C6.96669 15.6975 7.0775 15.575 7.11394 15.4184L7.50185 13.7025C7.53747 13.5485 7.49312 13.3858 7.38863 13.2773C6.58903 12.4487 6.06022 11.2333 5.97313 10.0275C5.9565 9.80003 5.78472 9.62505 5.5781 9.62505H5.44907C5.24957 9.62505 5.08094 9.46054 5.05641 9.24181L4.85851 7.49179C4.84426 7.36493 4.87829 7.24328 4.95429 7.14792C5.03029 7.05255 5.13557 7.00005 5.25116 7.00005H5.33269C5.44669 7.00005 5.55516 6.94579 5.62957 6.85219C5.70479 6.75769 5.7396 6.63255 5.72535 6.50832C5.67469 6.05944 5.54169 4.80293 5.54169 4.37505C5.54169 3.01005 5.78394 1.78242 8.71232 1.75005C8.79307 1.74919 8.87304 1.72032 8.93872 1.66868C9.82222 0.969568 10.7706 0.875068 11.5821 0.875068C12.6952 0.875068 13.4805 1.25044 13.9183 1.98983C14.444 2.87794 14.2176 3.33732 13.9698 3.62869L13.5739 4.06621C13.5043 4.14319 13.4631 4.24557 13.4583 4.3541L13.3626 6.54421C13.3578 6.66319 13.3966 6.77869 13.4702 6.86532C13.5438 6.95194 13.646 7.00182 13.7536 7.00268C13.8684 7.00354 13.9729 7.05694 14.0481 7.1523C14.1233 7.2468 14.1566 7.36669 14.1423 7.49179L13.9444 9.24181C13.9199 9.46054 13.7505 9.62505 13.513 9.62505C13.3063 9.62505 13.1346 9.80007 13.1179 10.0275C13.0285 11.2718 12.4743 12.5108 11.6343 13.3429C11.5251 13.4505 11.4792 13.6168 11.5148 13.7743L11.8869 15.4184C11.9225 15.575 12.0334 15.6975 12.1743 15.7369L15.4375 16.6381C16.9393 17.0537 18.0247 18.4537 18.187 20.125H0.81225V20.125Z" fill="#B3B3B3"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_109_379">
+					<rect width="19" height="21" fill="white"/>
+					</clipPath>
+					</defs>
+					</svg>
+					постоянных клиентов
+				</p>
+			</div>
+			<div class="item">
+				<div class="number">
+					10 000+
+				</div>
+				<p>
+					<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_109_371)">
+					<path d="M17.1167 16.625H8.88912C7.9135 16.625 7.049 15.9714 6.78825 15.036L4.00662 5.327C3.84912 4.76525 3.332 4.375 2.74662 4.375H0.567871C0.326371 4.375 0.130371 4.179 0.130371 3.9375C0.130371 3.696 0.326371 3.5 0.567871 3.5H2.74662C3.72225 3.5 4.58675 4.15363 4.8475 5.089L5.39612 7H19.817C20.2361 7 20.6202 7.1925 20.8696 7.5285C21.1199 7.8645 21.1942 8.288 21.0735 8.68875L19.1914 15.12C18.8886 16.0265 18.0565 16.625 17.1167 16.625ZM5.64637 7.875L7.63 14.798C7.78662 15.3598 8.30375 15.75 8.88912 15.75H17.1167C17.6715 15.75 18.1807 15.3834 18.3557 14.8593L20.2361 8.4385C20.2764 8.30463 20.251 8.16375 20.1679 8.05175C20.0847 7.93887 19.957 7.875 19.817 7.875H5.64637Z" fill="#B3B3B3"/>
+					<path d="M9.75537 21C8.79025 21 8.00537 20.2151 8.00537 19.25C8.00537 18.2849 8.79025 17.5 9.75537 17.5C10.7205 17.5 11.5054 18.2849 11.5054 19.25C11.5054 20.2151 10.7205 21 9.75537 21ZM9.75537 18.375C9.27237 18.375 8.88037 18.7679 8.88037 19.25C8.88037 19.7321 9.27237 20.125 9.75537 20.125C10.2384 20.125 10.6304 19.7321 10.6304 19.25C10.6304 18.7679 10.2384 18.375 9.75537 18.375Z" fill="#B3B3B3"/>
+					<path d="M15.8804 21C14.9152 21 14.1304 20.2151 14.1304 19.25C14.1304 18.2849 14.9152 17.5 15.8804 17.5C16.8455 17.5 17.6304 18.2849 17.6304 19.25C17.6304 20.2151 16.8455 21 15.8804 21ZM15.8804 18.375C15.3974 18.375 15.0054 18.7679 15.0054 19.25C15.0054 19.7321 15.3974 20.125 15.8804 20.125C16.3634 20.125 16.7554 19.7321 16.7554 19.25C16.7554 18.7679 16.3634 18.375 15.8804 18.375Z" fill="#B3B3B3"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_109_371">
+					<rect width="21" height="21" fill="white" transform="translate(0.130371)"/>
+					</clipPath>
+					</defs>
+					</svg>
+					товаров в наличии
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="popular-categories-block">
+		<div class="wrap">
+			<div class="block-name">
+				Популярные категории
+			</div>
+			<div class="list">
+				<div class="item">
+					<div class="image">
+						<img src="img/category1.png">
+					</div>
+					<p>Доступная среда</p>
+					<a href="#">Перейти</a>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="img/category2.png">
+					</div>
+					<p>Логопедическое борудование</p>
+					<a href="#">Перейти</a>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="img/category3.png">
+					</div>
+					<p>Оборудование для <br/>улицы</p>
+					<a href="#">Перейти</a>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="img/category4.png">
+					</div>
+					<p>Оборудование для проведения коррекционно-развивающих занятий</p>
+					<a href="#">Перейти</a>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="img/category1.png">
+					</div>
+					<p>Доступная среда</p>
+					<a href="#">Перейти</a>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="img/category2.png">
+					</div>
+					<p>Логопедическое борудование</p>
+					<a href="#">Перейти</a>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="img/category3.png">
+					</div>
+					<p>Оборудование для <br/>улицы</p>
+					<a href="#">Перейти</a>
+				</div>
+				<div class="item">
+					<div class="image">
+						<img src="img/category4.png">
+					</div>
+					<p>Оборудование для проведения коррекционно-развивающих занятий</p>
+					<a href="#">Перейти</a>
+				</div>
+			</div>
+			<button class="bottom-button">В каталог</button>
+		</div>
+	</div>
+	<div class="index-about-block">
+		<div class="wrap">
+			<div class="line"></div>
+			<div class="text">
+				<div class="name">
+					Только проверенные и сертифицированные товары
+				</div>
+				<div class="image"></div>
+				<p>Наш интернет-магазин готов предложить Вам только проверенные, сертифицированные товары, известных мировых производителей технических средств реабилитации.</p>
+				<p>Ассортимент и цены нашего магазина Вас приятно удивят. Наш интернет-магазин создан для того, чтобы помогать людям столкнувшим с болезнью больных и близких. Наше кредо – помогать людям, а не продавать товар! Встает вопрос о приобретении средств по уходу за больными, их реабилитации и восстановлению жизненных функций, смело обращайтесь к нам! Мы будем рады помочь Вам в решении ваших жизненно-важных проблем. Мы это умеем, нас за это ценят!</p>
+			</div>
+			<div class="flex">
+				<div class="image">
+					<img src="img/image2.png">
+				</div>
+				<div class="item">
+					<div class="icon">
+						<img src="img/about1.svg">
+					</div>
+					<p>Гарантия</p>
+					Даем 100% гарантию на возврат и обмен товара
+				</div>
+				<div class="item">
+					<div class="icon">
+						<img src="img/about2.svg">
+					</div>
+					<p>Фото перед отправкой</p>
+					Отправим фотографию Вашей покупки в WhatsApp или Telegram
+				</div>
+				<div class="item">
+					<div class="icon">
+						<img src="img/about3.svg">
+					</div>
+					<p>Скидка 10% </p>
+					При повторном заказе в течение месяца получите скидку 10%
+				</div>
+				<div class="item">
+					<div class="icon">
+						<img src="img/about4.svg">
+					</div>
+					<p>Бесплатная упаковка</p>
+					Платите только за товар. Услуги по настройке оборудования - бесплатные
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="faq-block other">
+		<div class="wrap">
+			<div class="block-name">
+				Вопрос - ответ
+			</div>
+			<div class="top-text">
+				Публикуем ответы на часто-задаваемые вопросы от наших клиентов
+			</div>
+			<div class="item">
+				<div class="name">
+					Как вернуть товар хорошего качества, который мне не подошёл?
+				</div>
+				<div class="text">
+					Вы можете вернуть товар, который не подошёл или не понравился вам, в течение 14 дней со дня покупки. При этом товар должен быть исправным и без повреждений. Для возврата нужно предъявить чек, заводские ярлыки при их наличии и упаковку.
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					Как вернуть деньги за приобретение технического средства реабилитации (ТСР)?
+				</div>
+				<div class="text">
+					Вы можете вернуть товар, который не подошёл или не понравился вам, в течение 14 дней со дня покупки. При этом товар должен быть исправным и без повреждений. Для возврата нужно предъявить чек, заводские ярлыки при их наличии и упаковку.
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					Как мне получить электронный чек при оплате онлайн?
+				</div>
+				<div class="text">
+					Вы можете вернуть товар, который не подошёл или не понравился вам, в течение 14 дней со дня покупки. При этом товар должен быть исправным и без повреждений. Для возврата нужно предъявить чек, заводские ярлыки при их наличии и упаковку.
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					Я живу не в Москве и хочу заказать доставку. Какие способы доставки есть в регионы?
+				</div>
+				<div class="text">
+					Вы можете вернуть товар, который не подошёл или не понравился вам, в течение 14 дней со дня покупки. При этом товар должен быть исправным и без повреждений. Для возврата нужно предъявить чек, заводские ярлыки при их наличии и упаковку.
+				</div>
+			</div>
+			<div class="item">
+				<div class="name">
+					Как узнать точную стоимость доставки?
+				</div>
+				<div class="text">
+					Вы можете вернуть товар, который не подошёл или не понравился вам, в течение 14 дней со дня покупки. При этом товар должен быть исправным и без повреждений. Для возврата нужно предъявить чек, заводские ярлыки при их наличии и упаковку.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="consult-block">
+		<img src="img/bg2.png" class="topbg">
+		<div class="wrap">
+			<div class="block-name">
+				Нужна консультация?
+			</div>
+			<div class="top-text">
+				Остаьвте заявку и мы Вам перезвоним в ближайшее время
+			</div>
+			<form>
+				<p>Имя</p>
+				<input type="text" placeholder="Введите Ваше имя">
+				<p>Контактный телефон</p>
+				<input type="text" placeholder="+7 (___) ___ - __ - __">
+				<button>Заказать консультацию</button>
+				<div class="bottom-text">
+					Отправляя заявку Вы соглашаетесь с&nbsp;<a href="#">политикой конфиденциальности</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<footer class="footer index">
+		<div class="wrap">
+			<div class="flex">
+				<nav>
+					<div class="name">
+						Каталог
+					</div>
+					<ul>
+						<li><a href="#">Коляски</a></li>
+						<li><a href="#">Велосипеды</a></li>
+						<li><a href="#">Игрушки</a></li>
+						<li><a href="#">Ходунки</a></li>
+						<li><a href="#">Санки и снегокаты</a></li>
+						<li><a href="#">Аксессуары</a></li>
+					</ul>
+				</nav>
+				<nav>
+					<div class="name">
+						Компания
+					</div>
+					<ul>
+						<li><a href="#">О магазине</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Доставка</a></li>
+						<li><a href="#">Оплата</a></li>
+						<li><a href="#">Скидки</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="contacts">
+					<div class="name">
+						Контакты
+					</div>
+					<div class="phones">
+						<a href="#">+7 499 123 45 67</a>
+						<a href="#">+7 499 123 45 67</a>
+						<a href="#">+7 499 123 45 67</a>
+					</div>
+					<a href="#" class="mail">hello@mir-owz.ru</a>
+					<div class="adress">
+						Наш адрес: Москва, ул. Название улицы 10, офис 11
+						<a href="#">смотреть на карте</a>
+					</div>
+				</div>
+				<div class="subscribe">
+					<div class="name">
+						Подписка
+					</div>
+					<p>Подпишитесь и будьте в курсе всех новостей и акций нашего магазина</p>
+					<form>
+						<input type="text" placeholder="Введите Ваш e-mail"> </form>
+				</div>
+				<div class="social">
+					<div class="name">
+						Соц сети
+					</div>
+					<a href="#"><img src="img/social1.svg"></a>
+					<a href="#"><img src="img/social2.svg"></a>
+					<a href="#"><img src="img/social3.svg"></a>
+				</div>
+			</div>
+			<div class="flex bottom">
+				<div class="copy">
+					© 2023 Мир ОВЗ. Интернет-магазин товаров для реабилитации детей. <a href="#">Политика конфиденциальности</a>.
+				</div>
+				<div class="dev">
+					Разработка сайта <a href="#"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
