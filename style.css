@@ -473,7 +473,13 @@ main {
   width: 1300px;
 }
 * {
-  outline: none!important;
+  outline: none !important;
+}
+.advertisement-block {
+  background-color: lightgray;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 22px;
 }
 .flex {
   display: -webkit-box;
@@ -726,7 +732,7 @@ main {
   box-sizing: border-box;
   color: #fff;
   border-radius: 10px;
-  background: url('img/catalog.svg') no-repeat left 20px top 50%, url('img/arrow.svg') no-repeat right 22px top 50%, #ff1b6d;
+  background: url('img/catalog.svg') no-repeat left 20px top 50%, url('img/arrow.svg') no-repeat right 22px top 50%, #FF1B6D;
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
@@ -745,7 +751,7 @@ main {
 .top-menu ul li a {
   display: block;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
 }
 .top-menu .contacts .mess {
@@ -778,14 +784,14 @@ main {
 }
 .top-menu .contacts .links a:nth-child(1) {
   display: block;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
   margin-bottom: 4px;
 }
 .top-menu .contacts .links a:nth-child(2) {
   display: inline-block;
   color: #FF1B6D;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   padding-left: 14px;
   background: url('img/phone.svg') no-repeat 0 5px;
@@ -1004,7 +1010,7 @@ h1 {
   width: 100%;
   height: 52px;
   border-radius: 10px;
-  background: #2c2c2c url('img/mail.svg') no-repeat right 18px top 50%;
+  background: #2C2C2C url('img/mail.svg') no-repeat right 18px top 50%;
   padding: 0 24px;
   color: #fff;
 }
@@ -1111,22 +1117,18 @@ h1 {
   padding-left: 9px;
 }
 .notifications-page .item {
-  cursor: pointer;
   margin-bottom: 22px;
   position: relative;
   border-radius: 10px;
   border: 1px solid #D9D9D9;
   padding: 21px 240px 22px 220px;
-  background: url('img/notification.svg') no-repeat 29px 26px, url('img/arrow3.svg') no-repeat top 28px right 25px;
+  background: url('img/notification2.svg') no-repeat 29px 26px;
   line-height: 22px;
   color: #252525;
-}
-.notifications-page .item.opened {
-  background: url('img/notification2.svg') no-repeat 29px 26px, url('img/arrow3a.svg') no-repeat top 28px right 25px;
   border: 1px solid #FF1B6D;
   padding-bottom: 29px;
 }
-.notifications-page .item.opened .text {
+.notifications-page .item .text {
   height: auto;
   overflow: auto;
   white-space: normal;
@@ -1137,12 +1139,6 @@ h1 {
   left: 90px;
   font-size: 12px;
   font-weight: 500;
-}
-.notifications-page .item .text {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  height: 22px;
 }
 .site-item {
   border-radius: 15px;
@@ -1275,10 +1271,10 @@ h1 {
 }
 .site-item button {
   width: 100%;
+  color: #fff;
   height: 45px;
   border-radius: 10px;
-  background: #FFDDE9;
-  color: #FF1B6D;
+  background: #FF1B6D;
   font-size: 15px;
   font-weight: 500;
 }
@@ -1362,6 +1358,27 @@ h1 {
   font-size: 12px;
   margin-bottom: 20px;
 }
+.orders-page .order-item .link {
+  margin-top: 30px;
+}
+.orders-page .order-item .link a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 154.074px;
+  height: 41px;
+  line-height: 41px;
+  font-weight: 500;
+  font-size: 13px;
+  border-radius: 1000px;
+  margin-right: 12px;
+  background: #FF1B6D;
+  color: #fff;
+}
+.orders-page .order-item .main-info {
+  width: 100%;
+  justify-content: space-between;
+}
 .orders-page .order-item .date {
   font-weight: 500;
   width: 10%;
@@ -1442,7 +1459,8 @@ h1 {
   color: #424242;
 }
 .personal-page .field input[type='text'],
-.personal-page .field input[type='password'] {
+.personal-page .field input[type='password'],
+.personal-page .field input[type='date'] {
   width: 100%;
   height: 55.722px;
   border-radius: 10px;
@@ -1701,6 +1719,26 @@ h1 {
 .order-page .block p span {
   color: #FF1B6D;
 }
+.order-page .block .promo-code-form .promo-code-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.order-page .block .promo-code-form .promo-code-input {
+  margin-bottom: 20px;
+}
+.order-page .block .promo-code-form .promo-code-btn {
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  width: 234.916px;
+  height: 50.345px;
+  border-radius: 10px;
+  background: #FF1B6D;
+  margin-bottom: 6px;
+}
 .order-page .block .flex {
   padding-bottom: 14px;
 }
@@ -1797,6 +1835,34 @@ h1 {
 .order-page .block .result span {
   margin-left: 25px;
 }
+.order-page .discount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 54px;
+  padding: 0 20px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  background: #F4F4F4;
+  width: 100%;
+  box-sizing: border-box;
+  color: #252525;
+}
+.order-page .discount .text {
+  display: flex;
+  justify-content: space-between;
+}
+.order-page .discount .discount__title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.order-page .discount .discount__link {
+  color: #FF1B6D;
+  text-decoration: none;
+}
+.order-page .discount .count {
+  color: #FF1B6D;
+}
 .cart-page {
   padding-bottom: 120px;
 }
@@ -1892,6 +1958,9 @@ h1 {
 }
 .cart-page .item div .number span.minus {
   right: 0;
+}
+.cart-page .flex {
+  margin-bottom: 88px;
 }
 .cart-page .bottom-text {
   font-family: Montserrat Alternates;
@@ -1998,7 +2067,7 @@ h1 {
   width: 183px;
   height: 41px;
   border-radius: 1000px;
-  background: #f3f3f3 url('img/select.svg') no-repeat right 20px top 50%;
+  background: #F3F3F3 url('img/select.svg') no-repeat right 20px top 50%;
   padding: 0 22px;
   font-size: 13px;
   appearance: none;
@@ -2050,7 +2119,7 @@ h1 {
   fill: #252525;
 }
 .discounts-page .types a svg rect {
-  fill: #b6b6b6;
+  fill: #B6B6B6;
 }
 .discounts-page .site-item {
   width: 23%;
@@ -2209,8 +2278,28 @@ h1 {
   object-fit: cover;
   margin-right: 17px;
 }
-.reviews-page .item .rating {
+.reviews-page .item .extra-info {
   margin: 22px 0 46px;
+  display: flex;
+  gap: 20px;
+}
+.reviews-page .item .extra-info .date {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+.reviews-page .item .text .block {
+  margin-bottom: 25px;
+}
+.reviews-page .item .text .block-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.reviews-page .item .text .block-descr {
+  color: #252525;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
 }
 .reviews-page .item .rating span {
   display: inline-block;
@@ -2352,6 +2441,7 @@ h1 {
   max-width: 530px;
   font-size: 15px;
   line-height: 25px;
+  margin-bottom: 40px;
 }
 .about-page .block1 .text .name {
   margin-bottom: 25px;
@@ -2360,6 +2450,18 @@ h1 {
   font-weight: 800;
   line-height: 55px;
   color: #252525;
+}
+.about-page .block1 .btn {
+  color: #fff;
+  border-radius: 10px;
+  background-color: #FF1B6D;
+  padding: 16px 20px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  /* 162.5% */
 }
 .about-page .block2 {
   text-align: center;
@@ -2384,7 +2486,7 @@ h1 {
 .about-page .block2 .item p {
   margin: -5px 0 17px;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .about-page .block3 {
   padding-bottom: 30px;
@@ -2422,7 +2524,10 @@ h1 {
   color: #292929;
 }
 .faq-block {
-  background: url('img/faq-block.png') center / cover;
+  background: url('img/faq-block.png');
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding: 92px 0 50px;
 }
 .faq-block.other {
@@ -2607,7 +2712,7 @@ h1 {
   right: 12px;
   bottom: 13px;
   border-radius: 10px;
-  background: #efefef url('img/similar.svg') no-repeat 13px 50%;
+  background: #EFEFEF url('img/similar.svg') no-repeat 13px 50%;
   padding: 9px 13px 9px 38px;
   text-decoration: none;
 }
@@ -2683,7 +2788,7 @@ h1 {
   z-index: 2;
   width: 22px;
   height: 22px;
-  opacity: .2;
+  opacity: 0.2;
 }
 .item-page .info .photos .slider-nav .slick-prev:hover,
 .item-page .info .photos .slider-nav .slick-next:hover {
@@ -2851,7 +2956,7 @@ h1 {
   width: 100%;
   height: 43.5px;
   border-radius: 10px;
-  background: #f4f4f4 url('img/select.svg') no-repeat right 20px top 50%;
+  background: #F4F4F4 url('img/select.svg') no-repeat right 20px top 50%;
   padding: 0 20px;
   appearance: none;
   font-weight: 300;
@@ -3179,7 +3284,7 @@ h1 {
   width: 145px;
   height: 41px;
   border-radius: 1000px;
-  background: #f3f3f3 url('img/select.svg') no-repeat right 20px top 50%;
+  background: #F3F3F3 url('img/select.svg') no-repeat right 20px top 50%;
   padding: 0 22px;
   font-size: 13px;
   appearance: none;
@@ -3205,7 +3310,7 @@ h1 {
   fill: #252525;
 }
 .catalog-page .sort .types a svg rect {
-  fill: #b6b6b6;
+  fill: #B6B6B6;
 }
 .catalog-page .filter {
   width: 25%;
@@ -3454,7 +3559,7 @@ h1 {
   right: 12px;
   bottom: 13px;
   border-radius: 10px;
-  background: #efefef url('img/similar.svg') no-repeat 13px 50%;
+  background: #EFEFEF url('img/similar.svg') no-repeat 13px 50%;
   padding: 9px 13px 9px 38px;
   text-decoration: none;
 }
@@ -3504,7 +3609,7 @@ h1 {
   z-index: 2;
   width: 30px;
   height: 30px;
-  opacity: .2;
+  opacity: 0.2;
 }
 .popup-item .photos .slider-nav2 .slick-prev:hover,
 .popup-item .photos .slider-nav2 .slick-next:hover {
@@ -3764,7 +3869,7 @@ h1 {
   width: 169px;
   height: 52px;
   border-radius: 10px;
-  background: #ff1b6d url('img/arrow6.svg') no-repeat right 20px top 50%;
+  background: #FF1B6D url('img/arrow6.svg') no-repeat right 20px top 50%;
   padding: 0 25px;
   color: #fff;
 }
@@ -3817,7 +3922,7 @@ h1 {
   height: 42.5px;
   text-align: left;
   border-radius: 10px;
-  background: #ffffff url('img/arrow7.svg') no-repeat right 15px top 50%;
+  background: #FFF url('img/arrow7.svg') no-repeat right 15px top 50%;
   padding: 0 15px;
   font-size: 13px;
   font-weight: 500;
@@ -3843,7 +3948,7 @@ h1 {
   border-radius: 20px;
 }
 .index-counts-block .item:hover {
-  background: #ff1b6d url('img/bg.svg') no-repeat right;
+  background: #FF1B6D url('img/bg.svg') no-repeat right;
   color: #fff;
 }
 .index-counts-block .item:hover p svg path {
@@ -3887,7 +3992,7 @@ h1 {
   width: 169px;
   height: 52px;
   border-radius: 10px;
-  background: #ff1b6d url('img/arrow8.svg') no-repeat right 20px top 50%;
+  background: #FF1B6D url('img/arrow8.svg') no-repeat right 20px top 50%;
   padding: 0 25px;
 }
 .popular-categories-block .block-name {
@@ -4077,6 +4182,10 @@ h1 {
   vertical-align: middle;
 }
 @media (max-width: 1330px) {
+  .faq-block {
+    background-image: none;
+    background: linear-gradient(180deg, #EBF9FF 0%, rgba(217, 217, 217, 0) 100%);
+  }
   .wrap {
     width: 970px;
   }
@@ -4444,7 +4553,7 @@ h1 {
   .about-page .block3 .item .text {
     width: 100%;
     order: 1;
-    padding: 30px 0 0 0!important;
+    padding: 30px 0 0 0 !important;
   }
   .consult-block {
     background: url('img/consult-block.png') left center / cover;
@@ -4750,10 +4859,7 @@ h1 {
   }
   .notifications-page .item {
     padding: 20px 60px 20px 50px;
-    background: url('img/notification.svg') no-repeat 20px 24px, url('img/arrow3.svg') no-repeat top 28px right 15px;
-  }
-  .notifications-page .item.opened {
-    background: url('img/notification2.svg') no-repeat 20px 24px, url('img/arrow3a.svg') no-repeat top 28px right 15px;
+    background: url('img/notification2.svg') no-repeat 20px 24px;
   }
   .fav-page .site-item {
     width: 49%;
@@ -4872,6 +4978,9 @@ h1 {
     width: 100%;
     margin: 20px 0 0 0;
   }
+  .cart-page .flex {
+    margin-bottom: 60px;
+  }
   .cart-page {
     padding-bottom: 60px;
   }
@@ -4945,18 +5054,24 @@ h1 {
   }
   .reviews-page .item {
     padding: 20px;
+    margin: 0 0 26px;
+  }
+  .reviews-page .item .extra-info {
+    flex-direction: column;
   }
   .reviews-page .item .author div img {
     margin-right: 12px;
   }
   .reviews-page .item .author {
     width: calc(100% - 130px);
+    margin-bottom: 30px;
   }
   .reviews-page .item .author div {
     line-height: 22px;
   }
-  .reviews-page .item .rating {
-    margin: 22px 0 35px;
+  .reviews-page .item .extra-info {
+    margin: 0;
+    gap: 10px;
   }
   .reviews-page .item p {
     line-height: 20px;
@@ -5317,7 +5432,7 @@ h1 {
     bottom: 200px;
     width: 100%;
     height: 120px;
-    background: linear-gradient(to bottom, #dfd5cb, transparent);
+    background: linear-gradient(to bottom, #DFD5CB, transparent);
     z-index: 3;
   }
   .footer.index {
@@ -5442,3 +5557,4 @@ h1 {
     padding-right: 0;
   }
 }
+/*# sourceMappingURL=./style.css.map */
