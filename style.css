@@ -3434,6 +3434,7 @@ h1 {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
+  background: none;
 }
 .catalog-page .sort .types button:not(:last-child) {
   margin-right: 26px;
@@ -5605,8 +5606,8 @@ h1 {
   .catalog-page .sort select {
     width: 141px;
   }
-  .catalog-page .sort .types a:not(:last-child) {
-    margin-right: 16px;
+  .catalog-page .sort .types button:not(:last-child) {
+    margin-right: 0px;
   }
   .catalog-page .sort .types {
     padding: 0 15px;
