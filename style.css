@@ -1140,6 +1140,132 @@ h1 {
   font-size: 12px;
   font-weight: 500;
 }
+.item-section.list {
+  width: 100% !important;
+}
+.item-section.list .site-item {
+  width: 100% !important;
+  display: grid !important;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "img descr btns";
+}
+.item-section.list .site-item .section {
+  width: 100%;
+}
+.item-section.list .site-item .section-1 {
+  grid-area: img;
+}
+.item-section.list .site-item .section-1 .photos {
+  max-width: 261px;
+}
+.item-section.list .site-item .section-1 .photos > div {
+  margin-bottom: 0;
+}
+.item-section.list .site-item .section-1 .fav-link {
+  display: none;
+}
+.item-section.list .site-item .section-2 {
+  grid-area: descr;
+  text-align: left;
+  position: relative;
+  margin-top: -80px;
+}
+.item-section.list .site-item .section-2 .fav-link {
+  top: 102%;
+  right: 91%;
+}
+.item-section.list .site-item .section-3 {
+  grid-area: btns;
+  max-width: 280px;
+  padding-left: 43px;
+  box-sizing: border-box;
+  border-left: 1px solid #ECECEC;
+}
+.item-section.list .site-item:hover {
+  margin-bottom: 30px !important;
+}
+.item-section.list .site-item .about {
+  display: block !important;
+}
+.item-section.list .site-item .fast {
+  opacity: 1 !important;
+}
+.item-section.list .site-item .delivery {
+  display: block !important;
+}
+.item-section.list .site-item .other {
+  display: block !important;
+}
+.item-section.full .site-item:hover {
+  margin-bottom: 0 !important;
+  height: 100% !important;
+}
+.item-section.full .site-item .fast {
+  opacity: 1 !important;
+}
+.item-section.full .site-item .about {
+  display: block !important;
+}
+.item-section.full .site-item .delivery {
+  display: block !important;
+}
+.item-section.full .site-item .other {
+  display: block !important;
+}
+@media (max-width: 1330px) {
+  .item-section.list .site-item .section-1 .photos {
+    max-width: 200px;
+  }
+  .item-section.list .site-item .section-2 {
+    min-width: 260px;
+  }
+  .item-section.list .site-item .section-3 {
+    align-self: end;
+    padding-left: 10px;
+    max-width: none;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .item-section.list .site-item {
+    width: 100% !important;
+    display: block !important;
+  }
+  .item-section.list .site-item .section-1 .fav-link {
+    display: inline-block;
+  }
+  .item-section.list .site-item .section-1 .photos {
+    max-width: none;
+  }
+  .item-section.list .site-item .section-2 {
+    margin-top: 25px;
+    text-align: center;
+    min-width: 0;
+  }
+  .item-section.list .site-item .section-2 .fav-link {
+    display: none;
+  }
+  .item-section.list .site-item .section-3 {
+    border: none;
+    padding-left: 0;
+  }
+}
+@media (max-width: 575px) {
+  .item-section.list .site-item .section-1 .fast {
+    position: relative !important;
+    bottom: -20px !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+  .item-section.list .site-item .section-2 {
+    margin-top: 75px;
+  }
+  .item-section.full .site-item .photos {
+    margin-bottom: 88px !important;
+  }
+}
 .site-item {
   border-radius: 15px;
   border: 1px solid #ECECEC;
@@ -1173,6 +1299,9 @@ h1 {
   height: 24px;
   background: url('img/fav-link.svg') center / cover;
   z-index: 3;
+}
+.site-item .fav-link--added {
+  background: url('img/fav-link-red.svg') center / cover !important;
 }
 .site-item .images {
   margin-bottom: 25px;
@@ -3277,6 +3406,9 @@ h1 {
   text-align: right;
   margin: -95px 0 63px;
 }
+.catalog-page .sort .sort-type svg {
+  vertical-align: middle;
+}
 .catalog-page .sort.inner {
   margin-top: 0;
 }
@@ -3411,8 +3543,11 @@ h1 {
 .catalog-page .list {
   width: 72%;
 }
-.catalog-page .list .site-item {
+.catalog-page .list .item-section {
   width: 31.7%;
+}
+.catalog-page .list .site-item {
+  width: 100%;
   margin-bottom: 30px;
   background: #fff;
 }
@@ -4577,8 +4712,11 @@ h1 {
   .catalog-page .list {
     width: 65%;
   }
+  .catalog-page .list .item-section {
+    width: 48.5% !important;
+  }
   .catalog-page .list .site-item {
-    width: 48.5%;
+    width: 100%;
   }
   .popup-item .photos {
     width: 100%;
@@ -4900,6 +5038,13 @@ h1 {
   }
   .site-item .counts span {
     font-size: 12px;
+  }
+  .site-item .fast {
+    position: static !important;
+    transform: none !important;
+  }
+  .site-item:hover .photos {
+    margin-bottom: 80px !important;
   }
   .site-item button {
     height: 30px;

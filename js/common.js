@@ -20,19 +20,41 @@ $(function () {
 		$input.change();
 		return false;
 	});
-	$('.types a').click(function () {
-		const $itemsSort = document.querySelectorAll('.sort-type')
-		$itemsSort.forEach(element => {
-			element.addEventListener('click', () => {
-				// цикл for проходиться по всем элементам и проверяет, есть ли у него класс active, если есть, то он его удаляет
-				for (let i = 0; i < $itemsSort.length; i++) {
-					if ($itemsSort[i].classList.contains('active')) {
-						$itemsSort[i].classList.remove('active')
-					}
-				}
-				element.classList.toggle('active')
-			})
+	// Добавление карточки в каталог
+	$('.fav-link').click(function () {
+		this.classList.toggle('fav-link--added')
+	});
+	// Изменение карточек в catalog.html
+	$('.sort-type').click(function () {
+		const $itemsSortArr = document.querySelectorAll('.sort-type')
+		$itemsSortArr.forEach(element => {
+			if (element.classList.contains('active')) {
+				element.classList.remove('active')
+			}
 		});
+		this.classList.add('active')
+
+		$siteItemArr = document.querySelectorAll('.item-section')
+		if (this.classList.contains('sort-type--default')) {
+			$siteItemArr.forEach(e => {
+				e.classList.remove('list')
+				e.classList.remove('full')
+			})
+		}
+		if (this.classList.contains('sort-type--full')) {
+			$siteItemArr.forEach(e => {
+				e.classList.remove('list')
+				e.classList.add('full')
+			})
+		}
+		if (this.classList.contains('sort-type--list')) {
+			$siteItemArr.forEach(e => {
+				e.classList.remove('full')
+				e.classList.add('list')
+			})
+		}
+		// $siteItemArr = document.querySelectorAll('.site-item')
+
 	});
 	$('body').on('click', '.password-control', function () {
 		if ($('#password-input').attr('type') == 'password') {
