@@ -3422,7 +3422,7 @@ h1 {
   appearance: none;
 }
 .catalog-page .sort .types {
-  display: inline-block;
+  display: inline-flex;
   border-radius: 1000px;
   background: #F3F3F3;
   height: 41px;
@@ -3430,18 +3430,18 @@ h1 {
   padding: 0 23px;
   margin-right: 20px;
 }
-.catalog-page .sort .types a {
+.catalog-page .sort .types button {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
 }
-.catalog-page .sort .types a:not(:last-child) {
+.catalog-page .sort .types button:not(:last-child) {
   margin-right: 26px;
 }
-.catalog-page .sort .types a.active svg rect {
+.catalog-page .sort .types button.active svg rect {
   fill: #252525;
 }
-.catalog-page .sort .types a svg rect {
+.catalog-page .sort .types button svg rect {
   fill: #B6B6B6;
 }
 .catalog-page .filter {
