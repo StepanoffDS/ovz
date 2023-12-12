@@ -2653,14 +2653,14 @@ h1 {
   color: #292929;
 }
 .faq-block {
-  background: url('img/faq-block.png');
-  background-position: top;
-  background-size: contain;
+  background-image: url('img/faq-block.png');
+  background-position: right bottom;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 92px 0 50px;
 }
 .faq-block.other {
-  background: url('img/faq-block2.png') bottom center / cover;
+  background-image: url('img/faq-block2.png');
   position: relative;
 }
 .faq-block.other:before {
@@ -4788,14 +4788,10 @@ h1 {
   .header .links {
     display: none;
   }
-  .header .logo a img {
-    display: none;
-  }
   .header .logo a {
     display: inline-block;
     width: 116px;
     height: 30px;
-    background: url('img/logo2.png');
   }
   .header .logo {
     margin: 1px 0 -1px 40px;
