@@ -229,4 +229,18 @@ $(function () {
 			}
 		]
 	});
+	$('.catalog-link--js').click(function (e) {
+		const catalogList = document.querySelector('.catalog-list--js')
+		e.stopPropagation()
+		// console.log($('.catalog-link--js'))
+		catalogList.classList.toggle('none')
+		// hint.addEventListener('click', (e) => e.stopPropagation())
+
+		document.addEventListener('click', closeCatalog)
+
+		function closeCatalog() {
+			catalogList.classList.add('none')
+		}
+		catalogList.addEventListener('click', (e) => e.stopPropagation())
+	})
 });

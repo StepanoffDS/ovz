@@ -445,6 +445,10 @@ main {
 .top-menu {
 	padding: 21px 0 34px;
 
+	.catalog {
+		position: relative;
+	}
+
 	.catalog-link {
 		width: 192.289px;
 		height: 52px;
@@ -457,6 +461,65 @@ main {
 		.med;
 		.none;
 		padding: 0 20px 0 60px;
+		text-align-last: left;
+		display: block;
+	}
+
+	.catalog-list {
+		position: absolute;
+		left: 0;
+		top: 76px;
+		opacity: 1;
+		transition: all 0.2s ease-in;
+		z-index: 5;
+
+		&.none {
+			// display: none;
+			top: 0;
+			opacity: 0;
+			clip: rect(0 0 0 0);
+			clip-path: inset(50%);
+			height: 1px;
+			overflow: hidden;
+			white-space: nowrap;
+			width: 1px;
+			transition: all 0.2s ease-in;
+		}
+
+		ul {
+			margin-top: 0;
+			margin-right: 0;
+
+			border-radius: 10px;
+			border: 2px solid #EAEAEA;
+			overflow: hidden;
+			background-color: #fff;
+
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		}
+
+		li {
+
+			a {
+				display: block;
+				text-decoration: none;
+				color: #646464;
+				font-size: 15px;
+				line-height: 22px;
+				padding: 18px 50px 18px 28px;
+				background: url(img/arrow5.svg) no-repeat right 20px top 50%;
+				width: 340px;
+				box-sizing: border-box;
+				border-radius: 10px;
+
+			}
+
+			&:not(:last-child) {
+				border-bottom: 1px solid #EAEAEA;
+				margin-right: 0;
+
+			}
+		}
 	}
 
 	ul {
@@ -573,6 +636,8 @@ h1 {
 	color: #252525;
 }
 
+
+
 .cabinet-page {
 	padding-bottom: 70px;
 
@@ -625,6 +690,165 @@ h1 {
 	.cabinet-content {
 		width: 76%;
 	}
+
+	.support-reviews {
+		margin-bottom: 72px;
+
+		.title {
+			margin-bottom: 24px;
+
+			color: #252525;
+			font-size: 15px;
+			font-weight: 600;
+			line-height: 25px;
+			/* 166.667% */
+
+			span {
+				color: #FF1B6D;
+			}
+		}
+
+		.cards {
+			display: flex;
+			flex-direction: column;
+			gap: 22px;
+
+			.item {
+				position: relative;
+
+				display: flex;
+				gap: 19px;
+				padding: 20px 29px;
+				border-radius: 10px;
+				border: 1px solid #D9D9D9;
+				background: #FFF;
+
+				color: #252525;
+
+
+				.img {
+					flex-shrink: 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 68px;
+					height: 68px;
+					overflow: hidden;
+					border-radius: 10px;
+					border: 1px solid #D7D7D7;
+					background: #FFF;
+
+					img {
+						max-height: 100%;
+						object-fit: contain;
+					}
+				}
+
+				.text {
+					overflow: hidden;
+
+					.name {
+						margin-bottom: 10px;
+						max-width: 700px;
+
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 25px;
+						/* 178.571% */
+					}
+
+					.desc {
+						margin-bottom: 4px;
+
+						font-size: 15px;
+						font-weight: 600;
+						line-height: 25px;
+						/* 166.667% */
+
+						width: 100%;
+						max-width: 837px;
+
+						// white-space: nowrap;
+						// overflow: hidden;
+						// text-overflow: ellipsis;
+
+						-webkit-line-clamp: 2;
+						display: -webkit-box;
+						-webkit-box-orient: vertical;
+						overflow: hidden;
+					}
+
+					.author {
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 25px;
+						/* 178.571% */
+					}
+
+					.date {
+						position: absolute;
+						top: 20px;
+						right: 33px;
+
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 25px;
+						/* 178.571% */
+					}
+				}
+			}
+		}
+
+		@media (max-width: 1330px) {
+			.cards {
+				.item {
+					.text {
+						.name {
+							max-width: 450px;
+						}
+					}
+				}
+			}
+		}
+
+		@media (max-width: 991px) {
+			.cards {
+				.item {
+					.text {
+						.desc {
+							-webkit-line-clamp: 3;
+
+						}
+
+						.date {
+							top: calc(100% - 45px);
+							line-height: 25px;
+						}
+					}
+				}
+			}
+		}
+
+		@media (max-width: 575px) {
+			.cards {
+				.item {
+					padding: 15px;
+
+					.text {
+						.desc {
+							-webkit-line-clamp: 4;
+						}
+
+						.date {
+							top: calc(100% - 40px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+
 }
 
 .support-page {
@@ -2214,10 +2438,14 @@ h1 {
 					&:nth-child(3) {
 						background: url('img/contacts6.svg') no-repeat left;
 					}
+
+					a {
+						text-decoration: none;
+					}
 				}
 			}
 
-			button {
+			>a {
 				.cf;
 				.med;
 				font-size: 15px;
@@ -2226,6 +2454,10 @@ h1 {
 				border-radius: 10px;
 				background: #FF1B6D;
 				margin-bottom: 25px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-decoration: none
 			}
 
 			.mess {

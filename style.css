@@ -723,6 +723,9 @@ main {
 .top-menu {
   padding: 21px 0 34px;
 }
+.top-menu .catalog {
+  position: relative;
+}
 .top-menu .catalog-link {
   width: 192.289px;
   height: 52px;
@@ -737,6 +740,52 @@ main {
   font-weight: 500;
   text-decoration: none;
   padding: 0 20px 0 60px;
+  text-align-last: left;
+  display: block;
+}
+.top-menu .catalog-list {
+  position: absolute;
+  left: 0;
+  top: 76px;
+  opacity: 1;
+  transition: all 0.2s ease-in;
+  z-index: 5;
+}
+.top-menu .catalog-list.none {
+  top: 0;
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+  transition: all 0.2s ease-in;
+}
+.top-menu .catalog-list ul {
+  margin-top: 0;
+  margin-right: 0;
+  border-radius: 10px;
+  border: 2px solid #EAEAEA;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.top-menu .catalog-list li a {
+  display: block;
+  text-decoration: none;
+  color: #646464;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 18px 50px 18px 28px;
+  background: url(img/arrow5.svg) no-repeat right 20px top 50%;
+  width: 340px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.top-menu .catalog-list li:not(:last-child) {
+  border-bottom: 1px solid #EAEAEA;
+  margin-right: 0;
 }
 .top-menu ul {
   margin-top: 16px;
@@ -872,6 +921,115 @@ h1 {
 }
 .cabinet-page .cabinet-content {
   width: 76%;
+}
+.cabinet-page .support-reviews {
+  margin-bottom: 72px;
+}
+.cabinet-page .support-reviews .title {
+  margin-bottom: 24px;
+  color: #252525;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  /* 166.667% */
+}
+.cabinet-page .support-reviews .title span {
+  color: #FF1B6D;
+}
+.cabinet-page .support-reviews .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.cabinet-page .support-reviews .cards .item {
+  position: relative;
+  display: flex;
+  gap: 19px;
+  padding: 20px 29px;
+  border-radius: 10px;
+  border: 1px solid #D9D9D9;
+  background: #FFF;
+  color: #252525;
+}
+.cabinet-page .support-reviews .cards .item .img {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #D7D7D7;
+  background: #FFF;
+}
+.cabinet-page .support-reviews .cards .item .img img {
+  max-height: 100%;
+  object-fit: contain;
+}
+.cabinet-page .support-reviews .cards .item .text {
+  overflow: hidden;
+}
+.cabinet-page .support-reviews .cards .item .text .name {
+  margin-bottom: 10px;
+  max-width: 700px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  /* 178.571% */
+}
+.cabinet-page .support-reviews .cards .item .text .desc {
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  /* 166.667% */
+  width: 100%;
+  max-width: 837px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cabinet-page .support-reviews .cards .item .text .author {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  /* 178.571% */
+}
+.cabinet-page .support-reviews .cards .item .text .date {
+  position: absolute;
+  top: 20px;
+  right: 33px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  /* 178.571% */
+}
+@media (max-width: 1330px) {
+  .cabinet-page .support-reviews .cards .item .text .name {
+    max-width: 450px;
+  }
+}
+@media (max-width: 991px) {
+  .cabinet-page .support-reviews .cards .item .text .desc {
+    -webkit-line-clamp: 3;
+  }
+  .cabinet-page .support-reviews .cards .item .text .date {
+    top: calc(100% - 45px);
+    line-height: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .cabinet-page .support-reviews .cards .item {
+    padding: 15px;
+  }
+  .cabinet-page .support-reviews .cards .item .text .desc {
+    -webkit-line-clamp: 4;
+  }
+  .cabinet-page .support-reviews .cards .item .text .date {
+    top: calc(100% - 40px);
+  }
 }
 .support-page p {
   margin-bottom: 17px;
@@ -2145,7 +2303,10 @@ h1 {
 .contacts-page .content .contacts ul li:nth-child(3) {
   background: url('img/contacts6.svg') no-repeat left;
 }
-.contacts-page .content .contacts button {
+.contacts-page .content .contacts ul li a {
+  text-decoration: none;
+}
+.contacts-page .content .contacts > a {
   color: #fff;
   font-weight: 500;
   font-size: 15px;
@@ -2154,6 +2315,10 @@ h1 {
   border-radius: 10px;
   background: #FF1B6D;
   margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 .contacts-page .content .contacts .mess a {
   display: inline-block;
