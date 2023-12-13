@@ -7,9 +7,11 @@
 	<link rel="stylesheet" href="slick.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script src="js/common.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 	<script>
 	  $( function() {
@@ -59,12 +61,12 @@
 	<div class="menubg"></div>
 	<nav class="mobile-menu">
 		<ul>
-			<li><a href="#">О магазине</a></li>
-			<li><a href="#">Отзывы</a></li>
-			<li><a href="#">Доставка</a></li>
-			<li><a href="#">Оплата</a></li>
-			<li><a href="#">Скидки</a></li>
-			<li><a href="#">Контакты</a></li>
+			<li><a href="about.html">О магазине</a></li>
+			<li><a href="reviews.html">Отзывы</a></li>
+			<li><a href="delivery.html">Доставка</a></li>
+			<li><a href="payments.html">Оплата</a></li>
+			<li><a href="discount.html">Скидки</a></li>
+			<li><a href="contacts.html">Контакты</a></li>
 		</ul>
 	</nav>
 	<div class="top-page-line">
@@ -191,19 +193,33 @@
 					<a href="#">Корзина</a>
 				</div>
 			</div>
-			<a href="#" class="phone">+7 (495) 123-45-67</a>
+			<a href="tel:+74951234567" class="phone">+7 (495) 123-45-67</a>
 		</div>
 	</header>
 	<nav class="top-menu">
 		<div class="wrap flex">
-			<a href="#" class="catalog-link">Каталог</a>
+			<div class="catalog">
+				<button class="catalog-link catalog-link--js">Каталог</button>
+				<nav class="catalog-list catalog-list--js none">
+					<ul>
+						<li><a href="#">Мебель и средства <br/>передвижения</a></li>
+						<li><a href="#">Оборудование для инклюзивного образования</a></li>
+						<li><a href="#">Оборудование для проведения коррекционно-развивающих занятий</a></li>
+						<li><a href="#">Интерактивное оборудование</a></li>
+						<li><a href="#">Реабилитационное оборудование</a></li>
+						<li><a href="#">Доступная среда</a></li>
+						<li><a href="#">Оборудование для улицы</a></li>
+						<li><a href="#">Логопедическое оборудование</a></li>
+					</ul>
+				</nav>
+			</div>
 			<ul>
-				<li><a href="#">О магазине</a></li>
-				<li><a href="#">Отзывы</a></li>
-				<li><a href="#">Доставка</a></li>
-				<li><a href="#">Оплата</a></li>
-				<li><a href="#">Скидки</a></li>
-				<li><a href="#">Контакты</a></li>
+				<li><a href="about.html">О магазине</a></li>
+				<li><a href="reviews.html">Отзывы</a></li>
+				<li><a href="delivery.html">Доставка</a></li>
+				<li><a href="payments.html">Оплата</a></li>
+				<li><a href="discount.html">Скидки</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 			<div class="contacts">
 				<div class="mess">
@@ -211,7 +227,7 @@
 					<a href="#"><img src="img/mess2.svg"></a>
 				</div>
 				<div class="links">
-					<a href="#">+7 (495) 123-45-67</a>
+					<a href="tel:+74951234567">+7 (495) 123-45-67</a>
 					<a href="#">заказать звонок</a>
 				</div>
 			</div>
@@ -276,7 +292,7 @@
 			</div>
 			<div class="sort">
 				<div class="types">
-					<a href="#" class="active">
+					<button class="sort-type sort-type--default active">
 						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect x="0.496094" y="0.497559" width="4.00244" height="4.00244" fill="#252525"/>
 						<rect x="6.49609" y="0.497559" width="4.00244" height="4.00244" fill="#252525"/>
@@ -288,8 +304,8 @@
 						<rect x="6.49609" y="12.4976" width="4.00244" height="4.00244" fill="#252525"/>
 						<rect x="12.4961" y="12.4976" width="4.00244" height="4.00244" fill="#252525"/>
 						</svg>
-					</a>
-					<a href="#">
+					</button>
+					<button class="sort-type sort-type--full">
 						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect x="0.496094" y="0.497559" width="4.00244" height="4.00244" fill="#B6B6B6"/>
 						<rect x="6.49609" y="0.497559" width="4.00244" height="4.00244" fill="#B6B6B6"/>
@@ -298,8 +314,8 @@
 						<rect x="0.496094" y="10.4976" width="16.0024" height="2.08563" fill="#B6B6B6"/>
 						<rect x="0.496094" y="14.4976" width="16.0024" height="2.08563" fill="#B6B6B6"/>
 						</svg>
-					</a>
-					<a href="#">
+					</button>
+					<button class="sort-type sort-type--list">
 						<svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect x="0.496094" y="0.497559" width="4.00244" height="4.00244" fill="#B6B6B6"/>
 						<rect x="0.496094" y="6.49756" width="4.00244" height="4.00244" fill="#B6B6B6"/>
@@ -308,7 +324,7 @@
 						<rect x="6.49609" y="7.49756" width="16.0024" height="2.08563" fill="#B6B6B6"/>
 						<rect x="6.49609" y="13.4976" width="16.0024" height="2.08563" fill="#B6B6B6"/>
 						</svg>
-					</a>
+					</button>
 				</div>
 				<select>
 					<option>Сортировать</option>
@@ -380,689 +396,2489 @@
 				</div>
 				<div class="list">
 					<div class="flex">
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup1" data-src="#popup1">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup1" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup2" data-src="#popup2">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup2" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge"><img src="img/badge3.svg"> Хит</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup3" data-src="#popup3">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup3" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup4" data-src="#popup4">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup4" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup5" data-src="#popup5">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup5" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge"><img src="img/badge3.svg"> Хит</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup6" data-src="#popup6">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup6" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup7" data-src="#popup7">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup7" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup8" data-src="#popup8">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup8" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge"><img src="img/badge3.svg"> Хит</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup9" data-src="#popup9">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup9" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup10" data-src="#popup10">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup10" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup11" data-src="#popup11">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup11" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge"><img src="img/badge3.svg"> Хит</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup12" data-src="#popup12">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup12" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup13" data-src="#popup13">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup13" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup14" data-src="#popup14">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup14" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge"><img src="img/badge3.svg"> Хит</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup15" data-src="#popup15">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup15" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup16" data-src="#popup16">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup16" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge color3"><img src="img/badge2.svg"> Распродажа</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup17" data-src="#popup17">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup17" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
-						<div class="site-item">
-							<a href="#" class="fav-link"></a>
-							<span class="badge"><img src="img/badge3.svg"> Хит</span>
-							<div class="photos">
-								<div class="images">
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
-									<div class="image"><img src="img/item.png"></div>
+						<div class="item-section">
+							<div class="site-item">
+								<div class="section section-1">
+									<button class="fav-link"></button>
+									<span class="badge color2"><img src="img/badge1.svg"> Цена что надо</span>
+									<div class="photos">
+										<div class="images">
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+											<div class="image"><img src="img/item.png"></div>
+										</div>
+										
+										<button class="fast popup-link" data-fancybox="popup18" data-src="#popup18">Быстрый просмотр</button>
+										
+									</div>
 								</div>
-								<button class="fast">Быстрый просмотр</button>
+	
+								<div class="section section-2">
+									<div class="name">
+										Тренажер «Горка»
+									</div>
+									<div class="about">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry
+									</div>
+									<div class="price">
+										30 600 ₽
+										<span class="old">45 600 ₽</span>
+										<span class="discount">-10%</span>
+									</div>
+									<button class="fav-link"></button>
+								</div>
+	
+								<div class="section section-3">
+									<div class="items">
+										Осталось: <span>9 шт.</span>
+									</div>
+									<div class="line">
+										<span style="width: 60%;"></span>
+									</div>
+									<div class="counts">
+										<span class="rating">4,8</span>
+										<span class="comments">671</span>
+									</div>
+									<div class="delivery">
+										Доставка: <span>Завтра</span>
+									</div>
+									<button>Купить</button>
+									<button class="other">В корзину</button>
+								</div>
 							</div>
-							<div class="name">
-								Тренажер «Горка»
+							
+							<div class="popup" id="popup18" style="display: none; width: 100%; max-width: 1300px;">
+								<div class="popup-item flex">
+									<div class="photos">
+										<div class="images">
+											<a href="#" class="similar">Похожие</a>
+											<div class="slider-for2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+											<div class="slider-nav2">
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+												<div class="item"><img src="img/item.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="info">
+										<h2>Тренажер «Горка»</h2>
+										<div class="top-info flex">
+											<div class="data">
+												<span class="rating">4,8</span>
+												<a href="#" class="comments">671</a>
+											</div>
+											<div class="art">
+												Артикул: 123456
+											</div>
+										</div>
+										<div class="items">
+											<div class="name">
+												Распродажа
+											</div>
+											<p>Осталось: <span>9 шт.</span></p>
+											<div class="line">
+												<span style="width: 60%;"></span>
+											</div>
+										</div>
+										<div class="price">
+											30 600 ₽
+											<span class="old">45 600 ₽</span>
+										</div>
+										<div class="credit">
+											<span>999 ₽</span>
+											x 6 месяцев в рассрочку
+										</div>
+										<div class="flex button">
+											<div class="number">
+												<span class="minus">-</span>
+												<input type="text" value="1"/>
+												<span class="plus">+</span>
+											</div>
+											<button>В корзину</button>
+											<a class="fav"></a>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Описание
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Доставка
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<div class="info-block">
+											<div class="name">
+												Оплата
+											</div>
+											<div class="text">
+												Конструкция столика рассчитана на его применение над кроватью. Основание стола заезжает под кровать, а столешница располагается сверху над лежащим. Подойдет для ухода за больными в медицинских учреждениях или дома, позволяет с комфортом проводить лечебные процедуры, принимать лекарства и пищу.
+											</div>
+										</div>
+										<button>БОЛЬШЕ ИНФОРМАЦИИ О ТОВАРЕ</button>
+									</div>
+								</div>
 							</div>
-							<div class="about">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry
-							</div>
-							<div class="price">
-								30 600 ₽
-								<span class="old">45 600 ₽</span>
-								<span class="discount">-10%</span>
-							</div>
-							<div class="items">
-								Осталось: <span>9 шт.</span>
-							</div>
-							<div class="line">
-								<span style="width: 60%;"></span>
-							</div>
-							<div class="counts">
-								<span class="rating">4,8</span>
-								<span class="comments">671</span>
-							</div>
-							<div class="delivery">
-								Доставка: <span>Завтра</span>
-							</div>
-							<button>Купить</button>
-							<button class="other">В корзину</button>
 						</div>
 					</div>
 					<div class="pages">
@@ -1343,7 +3159,7 @@
 				<p>Имя</p>
 				<input type="text" placeholder="Введите Ваше имя">
 				<p>Контактный телефон</p>
-				<input type="text" placeholder="+7 (___) ___ - __ - __">
+				<input data-tel-input type="text" placeholder="+7 (___) ___ - __ - __">
 				<button>Заказать консультацию</button>
 				<div class="bottom-text">
 					Отправляя заявку Вы соглашаетесь с&nbsp;<a href="#">политикой конфиденциальности</a>
@@ -1385,9 +3201,9 @@
 						Контакты
 					</div>
 					<div class="phones">
-						<a href="#">+7 499 123 45 67</a>
-						<a href="#">+7 499 123 45 67</a>
-						<a href="#">+7 499 123 45 67</a>
+						<a href="tel:+74991234567">+7 499 123 45 67</a>
+						<a href="tel:+74991234567">+7 499 123 45 67</a>
+						<a href="tel:+74991234567">+7 499 123 45 67</a>
 					</div>
 					<a href="#" class="mail">hello@mir-owz.ru</a>
 					<div class="adress">
