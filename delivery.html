@@ -6,9 +6,12 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="slick.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script src="js/common.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
 </head>
 <body>
 	<nav class="mob-menu">
@@ -273,7 +276,27 @@
 			</table>
 			<div class="button">
 				<p>Оставьте заявку и мы Вам сообщим стоимость доставки в Ваш город</p>
-				<button>Узнать стоимость доставки</button>
+				<button data-fancybox="popup5" data-src="#popup5" class="popup-link">Узнать стоимость доставки</button>
+				<div class="popup popup-cost" id="popup5" style="display: none; width: 100%; max-width: 514px;">
+					<form>
+						<h2 class="popup-title">Узнайте точную стоимость доставки</h2>
+						<p class="popup-subtitle">Оставьте Ваши данные и мы Вам перезвоним
+							и расчитаем точную стоимость.</p>
+						<div class="field">
+							<input type="text" name="name" placeholder="Введите ваше имя">
+						</div>
+						<div class="field">
+							<input data-tel-input type="text" name="tel" placeholder="Введите Ваш телефон">
+						</div>
+						<div class="field field-textarea">
+							<textarea cols="30" rows="4" placeholder="Комментарий"></textarea>
+						</div>
+						<button>Отправить заявку</button>
+						<div class="bottom-text">
+							Отправляя заявку, Вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

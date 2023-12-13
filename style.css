@@ -1031,6 +1031,13 @@ h1 {
     top: calc(100% - 40px);
   }
 }
+.support-page .title {
+  margin-bottom: 40px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 25px;
+  /* 96.154% */
+}
 .support-page p {
   margin-bottom: 17px;
   color: #252525;
@@ -2527,20 +2534,65 @@ h1 {
 .payments-page .button {
   margin-bottom: 20px;
 }
-.payments-page .button p {
+.payments-page .button > p {
   margin-bottom: 44px;
   color: #252525;
   font-size: 15px;
   font-weight: 300;
   line-height: 28px;
 }
-.payments-page .button button {
+.payments-page .button > button {
   color: #fff;
   font-size: 16px;
   width: 311.555px;
   height: 55.722px;
   border-radius: 10px;
   background: #FF1B6D;
+}
+.popup-cost {
+  color: #252525;
+}
+.popup-cost .popup-title {
+  margin-bottom: 17px;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.popup-cost .popup-subtitle {
+  margin-bottom: 24px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  /* 186.667% */
+}
+.popup-cost .field-textarea textarea {
+  width: 100%;
+  border-radius: 10px;
+  background: #F1F1F1;
+  padding: 25px;
+  font-size: 15px;
+  resize: none;
+}
+.popup-cost .field-textarea textarea::placeholder {
+  color: #424242;
+  font-size: 15px;
+  font-weight: 400;
+}
+.popup-cost .bottom-text {
+  max-width: 234px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 23px;
+  /* 176.923% */
+}
+.popup-cost .bottom-text a {
+  color: #FF1B6D !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 .reviews-page {
   padding-bottom: 21px;
@@ -4711,6 +4763,10 @@ h1 {
   }
   .cabinet-page .cabinet-content {
     width: 67%;
+  }
+  .cabinet-page .cabinet-content .support-page .title {
+    margin-bottom: 20px;
+    font-size: 22px;
   }
   .footer nav {
     display: none;
